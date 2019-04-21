@@ -6,14 +6,10 @@ Use command ```sh generate_test_cases.sh``` to generate Java classes. Please run
 
 # Test data format
 Test data is written in JSON files. Each file contains fields:
-* payload
-Post payload
-* expected
-Expected result. **status_code** is the HTTP response status code. error/success is for response message.
-* description
-Used for write log when the Test method is executed.
-* group
-Specify Categories in the report.
+* *payload*: Post payload
+* *expected*: Expected result. **status_code** is the HTTP response status code. error/success is for response message.
+* *description*: Used for write log when the Test method is executed.
+* *group*: Specify Categories in the report.
 
 # How to build it
 * Prerequisites:
