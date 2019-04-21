@@ -1,0 +1,15 @@
+{
+    "payload": {
+        "payment_method":"LOCAL",
+        "bank_country_code":"US",
+        "account_name":"12345678",
+        "account_number":"",
+        "aba":"11122233A"
+    },
+    "expected": {
+        "status_code" : 400,
+        "error" : "Length of account_number should be between 1 and 17 when bank_country_code is 'US'"
+    },
+    "description": "------Testcase16, BankAPI, Account Number less than one in US------",
+    "group": "AccountNumber"
+}

@@ -1,0 +1,16 @@
+{
+    "payload": {
+        "payment_method": "LOCAL",
+        "bank_country_code": "US",
+        "account_name": "John Smith",
+        "account_number": "123456789",
+        "aba": "12345",
+        "bsb":"123456"
+       } ,
+    "expected": {
+        "status_code" : 400,
+        "error" : "Length of 'aba' should be 9"
+    },
+    "description": "------Testcase34, BankAPI, ABA isn't 9------",
+    "group": "ABA"
+}

@@ -1,0 +1,16 @@
+{
+    "payload": {
+        "payment_method":"SWIFT",
+        "bank_country_code":"US",
+        "account_name":"John Smith",
+        "account_number":"123",
+        "swift_code":"123456789012",
+        "aba":"11122233A"
+    },
+    "expected": {
+        "status_code" : 400,
+        "error" : "Length of 'swift_code' should be either 8 or 11"
+    },
+    "description": "------Testcase30, BankAPI, Swift Code length more than eleven ------",
+    "group": "SwiftCode"
+}

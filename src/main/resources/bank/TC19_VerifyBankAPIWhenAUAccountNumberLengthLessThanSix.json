@@ -1,0 +1,16 @@
+{
+    "payload": {
+        "payment_method":"LOCAL",
+        "bank_country_code":"AU",
+        "account_name":"123456",
+        "account_number":"12345",
+        "aba":"11122233A",
+        "bsb":"123456"
+    },
+    "expected": {
+        "status_code" : 400,
+        "error" : "Length of account_number should be between 6 and 9 when bank_country_code is 'AU'"
+    },
+    "description": "------Testcase19, BankAPI, AU Account Number length less than six ------",
+    "group": "AccountNumber"
+}

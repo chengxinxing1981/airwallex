@@ -1,0 +1,16 @@
+{
+    "payload": {
+        "payment_method": "SWIFT",
+        "bank_country_code": "US",
+        "account_name": "John Smith",
+        "account_number": "123",
+        "swift_code": "ICBCDEBJ",
+        "aba": "11122233A"
+        },
+    "expected": {
+        "status_code" : 400,
+        "error": "The swift code is not valid for the given bank country code: US"
+    },
+    "description": "------Testcase37, BankAPI, Swift Code 5th 6th isn't match bank country code------",
+    "group": "SwiftCode"
+}

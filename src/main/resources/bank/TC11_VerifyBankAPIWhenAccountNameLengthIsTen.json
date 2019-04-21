@@ -1,0 +1,15 @@
+{
+    "payload": {
+        "payment_method":"LOCAL",
+        "bank_country_code":"US",
+        "account_name":"John Smith",
+        "account_number":"12345678",
+        "aba":"11122233A"
+    },
+    "expected": {
+        "status_code" : 200,
+        "success" : "Bank details saved"
+    },
+    "description": "------Testcase11, BankAPI, Account Name Length is Ten ------",
+    "group": "AccountName"
+}

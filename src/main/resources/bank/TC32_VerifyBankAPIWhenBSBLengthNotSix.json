@@ -1,0 +1,16 @@
+{
+    "payload": {
+        "payment_method": "LOCAL",
+        "bank_country_code": "AU",
+        "account_name": "John Smith",
+        "account_number": "123456789",
+        "aba": "123456789",
+        "bsb":"123"
+       } ,
+    "expected":{
+        "status_code" : 400,
+        "error" : "Length of 'bsb' should be 6"
+    },
+    "description": "------Testcase32, BankAPI, bsb length isn't 6------",
+    "group": "BSB"
+}

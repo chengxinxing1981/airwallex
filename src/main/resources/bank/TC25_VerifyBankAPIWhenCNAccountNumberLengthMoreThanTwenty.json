@@ -1,0 +1,16 @@
+{
+    "payload": {
+        "payment_method":"LOCAL",
+        "bank_country_code":"CN",
+        "account_name":"123456",
+        "account_number":"123456789012345678901",
+        "aba":"11122233A",
+        "bsb":"123456"
+    },
+    "expected":{
+        "status_code" : 400,
+        "error" : "Length of account_number should be between 8 and 20 when bank_country_code is 'CN'"
+    },
+    "description": "------Testcase25, BankAPI, CN Account Number more than twenty ------",
+    "group": "AccountNumber"
+}

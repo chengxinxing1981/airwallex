@@ -1,0 +1,16 @@
+{
+    "payload": {
+        "payment_method":"INVALID",
+        "bank_country_code":"US",
+        "account_name":"John Smith",
+        "account_number":"123",
+        "swift_code":"ICBCUSBJ",
+        "aba":"11122233A"
+    },
+    "expected": {
+        "status_code" : 400,
+        "error":"'payment_method' field required, the value should be either 'LOCAL' or 'SWIFT'"
+    },
+    "description": "------Testcase03, BankAPI, paymentmethod is either local or swift------",
+    "group": "PaymentMethod"
+}

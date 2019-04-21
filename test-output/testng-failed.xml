@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="bank.api.ExtentReporterNG"/>
+  </listeners>
+  <test name="Test(failed)">
+    <classes>
+      <class name="bank.api.cases.generated.TC24_VerifyBankAPIWhenCNAccountNumberLengthLessThanEight">
+        <methods>
+          <include name="test_TC24_VerifyBankAPIWhenCNAccountNumberLengthLessThanEight"/>
+        </methods>
+      </class> <!-- bank.api.cases.generated.TC24_VerifyBankAPIWhenCNAccountNumberLengthLessThanEight -->
+      <class name="bank.api.cases.generated.TC25_VerifyBankAPIWhenCNAccountNumberLengthMoreThanTwenty">
+        <methods>
+          <include name="test_TC25_VerifyBankAPIWhenCNAccountNumberLengthMoreThanTwenty"/>
+        </methods>
+      </class> <!-- bank.api.cases.generated.TC25_VerifyBankAPIWhenCNAccountNumberLengthMoreThanTwenty -->
+      <class name="bank.api.cases.generated.TC27_VerifyBankAPIWhenCNAccountNumberLengthIsTwenty">
+        <methods>
+          <include name="test_TC27_VerifyBankAPIWhenCNAccountNumberLengthIsTwenty"/>
+        </methods>
+      </class> <!-- bank.api.cases.generated.TC27_VerifyBankAPIWhenCNAccountNumberLengthIsTwenty -->
+      <class name="bank.api.cases.generated.TC20_VerifyBankAPIWhenAUAccountNumberLengthMoreThanNine">
+        <methods>
+          <include name="test_TC20_VerifyBankAPIWhenAUAccountNumberLengthMoreThanNine"/>
+        </methods>
+      </class> <!-- bank.api.cases.generated.TC20_VerifyBankAPIWhenAUAccountNumberLengthMoreThanNine -->
+      <class name="bank.api.cases.generated.TC33_VerifyBankAPIWhenNoABAInUS">
+        <methods>
+          <include name="test_TC33_VerifyBankAPIWhenNoABAInUS"/>
+        </methods>
+      </class> <!-- bank.api.cases.generated.TC33_VerifyBankAPIWhenNoABAInUS -->
+      <class name="bank.api.cases.generated.TC16_VerifyBankAPIWhenUSAccountNumberLengthLessThanOne">
+        <methods>
+          <include name="test_TC16_VerifyBankAPIWhenUSAccountNumberLengthLessThanOne"/>
+        </methods>
+      </class> <!-- bank.api.cases.generated.TC16_VerifyBankAPIWhenUSAccountNumberLengthLessThanOne -->
+      <class name="bank.api.cases.generated.TC17_VerifyBankAPIWhenUSAccountNumberLengthMoreThanSeventeen">
+        <methods>
+          <include name="test_TC17_VerifyBankAPIWhenUSAccountNumberLengthMoreThanSeventeen"/>
+        </methods>
+      </class> <!-- bank.api.cases.generated.TC17_VerifyBankAPIWhenUSAccountNumberLengthMoreThanSeventeen -->
+      <class name="bank.api.cases.generated.TC19_VerifyBankAPIWhenAUAccountNumberLengthLessThanSix">
+        <methods>
+          <include name="test_TC19_VerifyBankAPIWhenAUAccountNumberLengthLessThanSix"/>
+        </methods>
+      </class> <!-- bank.api.cases.generated.TC19_VerifyBankAPIWhenAUAccountNumberLengthLessThanSix -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,0 +1,14 @@
+{
+    "payload": {
+        "payment_method":"LOCAL",
+        "bank_country_code":"CN",
+        "account_name":"12345678",
+        "aba":"11122233A"
+    },
+    "expected": {
+        "status_code" : 400,
+        "error" : "'account_number' is required"
+    },
+    "description": "------Testcase14, BankAPI, No Account Number------",
+    "group": "AccountNumber"
+}

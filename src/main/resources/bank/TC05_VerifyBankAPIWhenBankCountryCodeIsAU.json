@@ -1,0 +1,17 @@
+
+{
+    "payload": {
+        "payment_method":"LOCAL",
+        "bank_country_code":"AU",
+        "account_name":"John Smith",
+        "account_number":"123456",
+        "aba":"11122233A",
+        "bsb":"123456"
+    },
+    "expected":{
+        "status_code" : 200,
+        "success" : "Bank details saved"
+    },
+    "description": "------Testcase05, BankAPI, Bank Country Code is AU------",
+    "group": "BankCountryCode"
+}

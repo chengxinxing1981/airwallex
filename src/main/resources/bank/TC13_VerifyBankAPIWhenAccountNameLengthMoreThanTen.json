@@ -1,0 +1,15 @@
+{
+    "payload": {
+        "payment_method":"LOCAL",
+        "bank_country_code":"US",
+        "account_name":"12345678901",
+        "account_number":"12345678",
+        "aba":"11122233A"
+    },
+    "expected": {
+        "status_code" : 400,
+        "error" : "Length of account_name should be between 2 and 10"
+    },
+    "description": "------Testcase13, BankAPI, Account Name Length is more than ten ------",
+    "group": "AccountName"
+}

@@ -1,0 +1,16 @@
+{
+    "payload": 
+    {
+        "payment_method":"LOCAL",
+        "bank_country_code":"US",
+        "account_name":"John Smith",
+        "account_number":"123",
+        "aba":"11122233A"
+    },
+    "expected": {
+        "status_code" : 200,
+        "success" : "Bank details saved"
+    },
+    "description": "------Testcase01, BankAPI, paymentmethod is LOCAL------",
+    "group": "PaymentMethod"
+}

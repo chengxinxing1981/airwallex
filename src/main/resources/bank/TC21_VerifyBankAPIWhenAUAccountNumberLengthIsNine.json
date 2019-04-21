@@ -1,0 +1,16 @@
+{
+    "payload": {
+        "payment_method":"LOCAL",
+        "bank_country_code":"AU",
+        "account_name":"123456",
+        "account_number":"123456789",
+        "aba":"11122233A",
+        "bsb":"123456"
+    },
+    "expected": {
+        "status_code" : 200,
+        "success" : "Bank details saved"
+    },
+    "description": "------Testcase21, BankAPI, AU Account Number length is nine ------",
+    "group": "AccountNumber"
+}

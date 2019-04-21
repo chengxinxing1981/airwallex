@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite" parallel="false">
+	<test name="Test" preserve-order="true">
+		<classes>
+			<class
+				name="bank.api.cases.generated.TC00_VerifyBankAPIWhenNoPaymentMethod" />
+			<class
+				name="bank.api.cases.generated.TC01_VerifyBankAPIWhenPaymentMethodIsLocal" />
+			<class
+				name="bank.api.cases.generated.TC02_VerifyBankAPIWhenPaymentMethodIsSwift" />
+			<class
+				name="bank.api.cases.generated.TC03_VerifyBankAPIWhenPaymentMethodIsEitherLocalOrSwift" />
+			<class
+				name="bank.api.cases.generated.TC04_VerifyBankAPIWhenBankCountryCodeIsUS" />
+			<class
+				name="bank.api.cases.generated.TC05_VerifyBankAPIWhenBankCountryCodeIsAU" />
+			<class
+				name="bank.api.cases.generated.TC06_VerifyBankAPIWhenBankCountryCodeIsCN" />
+			<class
+				name="bank.api.cases.generated.TC07_VerifyBankAPIWhenBankCountryCodeIsNotAUCNUS" />
+			<class
+				name="bank.api.cases.generated.TC08_VerifyBankAPIWhenNoBankCountryCode" />
+			<class
+				name="bank.api.cases.generated.TC09_VerifyBankAPIWhenNoAccountName" />
+			<class
+				name="bank.api.cases.generated.TC10_VerifyBankAPIWhenAccountNameLengthIsTwo" />
+			<class
+				name="bank.api.cases.generated.TC11_VerifyBankAPIWhenAccountNameLengthIsTen" />
+			<class
+				name="bank.api.cases.generated.TC12_VerifyBankAPIWhenAccountNameLengthLessTwo" />
+			<class
+				name="bank.api.cases.generated.TC13_VerifyBankAPIWhenAccountNameLengthMoreThanTen" />
+			<class
+				name="bank.api.cases.generated.TC14_VerifyBankAPIWhenNoAccountNumber" />
+			<class
+				name="bank.api.cases.generated.TC15_VerifyBankAPIWhenAccountNumberInUS" />
+			<class
+				name="bank.api.cases.generated.TC16_VerifyBankAPIWhenUSAccountNumberLengthLessThanOne" />
+			<class
+				name="bank.api.cases.generated.TC17_VerifyBankAPIWhenUSAccountNumberLengthMoreThanSeventeen" />
+			<class
+				name="bank.api.cases.generated.TC18_VerifyBankAPIWhenAccountNumberInAU" />
+			<class
+				name="bank.api.cases.generated.TC19_VerifyBankAPIWhenAUAccountNumberLengthLessThanSix" />
+			<class
+				name="bank.api.cases.generated.TC20_VerifyBankAPIWhenAUAccountNumberLengthMoreThanNine" />
+			<class
+				name="bank.api.cases.generated.TC21_VerifyBankAPIWhenAUAccountNumberLengthIsNine" />
+			<class
+				name="bank.api.cases.generated.TC22_VerifyBankAPIWhenAUAccountNumberLengthIsSix" />
+			<class
+				name="bank.api.cases.generated.TC23_VerifyBankAPIWhenAccountNumberInCN" />
+			<class
+				name="bank.api.cases.generated.TC24_VerifyBankAPIWhenCNAccountNumberLengthLessThanEight" />
+			<class
+				name="bank.api.cases.generated.TC25_VerifyBankAPIWhenCNAccountNumberLengthMoreThanTwenty" />
+			<class
+				name="bank.api.cases.generated.TC26_VerifyBankAPIWhenCNAccountNumberLengthIsEight" />
+			<class
+				name="bank.api.cases.generated.TC27_VerifyBankAPIWhenCNAccountNumberLengthIsTwenty" />
+			<class
+				name="bank.api.cases.generated.TC28_VerifyBankAPIWhenPaymentMethodIsSwiftAndNoSwiftCode" />
+			<class
+				name="bank.api.cases.generated.TC29_VerifyBankAPIWhenSwiftCodeLengthLessThanEight" />
+			<class
+				name="bank.api.cases.generated.TC30_VerifyBankAPIWhenSwiftCodeLengthMoreThanEleven" />
+			<class
+				name="bank.api.cases.generated.TC31_VerifyBankAPIWhenNoBSBInAU" />
+			<class
+				name="bank.api.cases.generated.TC32_VerifyBankAPIWhenBSBLengthNotSix" />
+			<class
+				name="bank.api.cases.generated.TC33_VerifyBankAPIWhenNoABAInUS" />
+			<class
+				name="bank.api.cases.generated.TC34_VerifyBankAPIWhenABALengthIsNotNine" />
+			<class
+				name="bank.api.cases.generated.TC35_VerifyBankAPIWhenHasABAInUS" />
+			<class
+				name="bank.api.cases.generated.TC36_VerifyBankAPIWhenNoABAInCN" />
+			<class
+				name="bank.api.cases.generated.TC37_VerifyBankAPIWhenSwiftCodeWithIncorrectSpecificChar" />
+			<class
+				name="bank.api.cases.generated.TC38_VerifyBankAPIWhenSwiftCodeSpecificChar" />
+
+		</classes>
+	</test> <!-- Test -->
+
+	<listeners>
+		<!-- <listener class-name="org.uncommons.reportng.HTMLReporter"/> <listener 
+			class-name="org.uncommons.reportng.JUnitXMLReporter"/> -->
+
+		<listener class-name="bank.api.ExtentReporterNG" />
+	</listeners>
+</suite> <!-- Suite -->

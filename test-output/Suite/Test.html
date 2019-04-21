@@ -1,0 +1,578 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>31/8/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Apr 21 17:41:51 CST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>25 seconds (25430 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='bank.api.cases.generated.TC16_VerifyBankAPIWhenUSAccountNumberLengthLessThanOne.test_TC16_VerifyBankAPIWhenUSAccountNumberLengthLessThanOne()'><b>test_TC16_VerifyBankAPIWhenUSAccountNumberLengthLessThanOne</b><br>Test class: bank.api.cases.generated.TC16_VerifyBankAPIWhenUSAccountNumberLengthLessThanOne</td>
+<td><div><pre>java.lang.AssertionError: expected [Length of account_number should be between 1 and 17 when bank_country_code is &apos;US&apos;] but found [&apos;account_number&apos; is required]
+	at bank.api.BankRestAPITest.assertResponse(BankRestAPITest.java:74)
+	at bank.api.cases.generated.TC16_VerifyBankAPIWhenUSAccountNumberLengthLessThanOne.test_TC16_VerifyBankAPIWhenUSAccountNumberLengthLessThanOne(TC16_VerifyBankAPIWhenUSAccountNumberLengthLessThanOne.java:22)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace22600334", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace22600334'><pre>java.lang.AssertionError: expected [Length of account_number should be between 1 and 17 when bank_country_code is &apos;US&apos;] but found [&apos;account_number&apos; is required]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:189)
+	at org.testng.Assert.assertEquals(Assert.java:199)
+	at bank.api.BankRestAPITest.assertResponse(BankRestAPITest.java:74)
+	at bank.api.cases.generated.TC16_VerifyBankAPIWhenUSAccountNumberLengthLessThanOne.test_TC16_VerifyBankAPIWhenUSAccountNumberLengthLessThanOne(TC16_VerifyBankAPIWhenUSAccountNumberLengthLessThanOne.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.TestNG.privateMain(TestNG.java:1442)
+	at org.testng.TestNG.main(TestNG.java:1411)
+</pre></div></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC16_VerifyBankAPIWhenUSAccountNumberLengthLessThanOne@3a03464</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC17_VerifyBankAPIWhenUSAccountNumberLengthMoreThanSeventeen.test_TC17_VerifyBankAPIWhenUSAccountNumberLengthMoreThanSeventeen()'><b>test_TC17_VerifyBankAPIWhenUSAccountNumberLengthMoreThanSeventeen</b><br>Test class: bank.api.cases.generated.TC17_VerifyBankAPIWhenUSAccountNumberLengthMoreThanSeventeen</td>
+<td><div><pre>java.lang.AssertionError: expected [Length of account_number should be between 1 and 17 when bank_country_code is &apos;US&apos;] but found [Length of account_number should be between 7 and 11 when bank_country_code is &apos;US&apos;]
+	at bank.api.BankRestAPITest.assertResponse(BankRestAPITest.java:74)
+	at bank.api.cases.generated.TC17_VerifyBankAPIWhenUSAccountNumberLengthMoreThanSeventeen.test_TC17_VerifyBankAPIWhenUSAccountNumberLengthMoreThanSeventeen(TC17_VerifyBankAPIWhenUSAccountNumberLengthMoreThanSeventeen.java:22)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace842741472", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace842741472'><pre>java.lang.AssertionError: expected [Length of account_number should be between 1 and 17 when bank_country_code is &apos;US&apos;] but found [Length of account_number should be between 7 and 11 when bank_country_code is &apos;US&apos;]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:189)
+	at org.testng.Assert.assertEquals(Assert.java:199)
+	at bank.api.BankRestAPITest.assertResponse(BankRestAPITest.java:74)
+	at bank.api.cases.generated.TC17_VerifyBankAPIWhenUSAccountNumberLengthMoreThanSeventeen.test_TC17_VerifyBankAPIWhenUSAccountNumberLengthMoreThanSeventeen(TC17_VerifyBankAPIWhenUSAccountNumberLengthMoreThanSeventeen.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.TestNG.privateMain(TestNG.java:1442)
+	at org.testng.TestNG.main(TestNG.java:1411)
+</pre></div></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC17_VerifyBankAPIWhenUSAccountNumberLengthMoreThanSeventeen@2d3fcdbd</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC19_VerifyBankAPIWhenAUAccountNumberLengthLessThanSix.test_TC19_VerifyBankAPIWhenAUAccountNumberLengthLessThanSix()'><b>test_TC19_VerifyBankAPIWhenAUAccountNumberLengthLessThanSix</b><br>Test class: bank.api.cases.generated.TC19_VerifyBankAPIWhenAUAccountNumberLengthLessThanSix</td>
+<td><div><pre>java.lang.AssertionError: expected [Length of account_number should be between 6 and 9 when bank_country_code is &apos;AU&apos;] but found [Length of account_number should be between 7 and 11 when bank_country_code is &apos;US&apos;]
+	at bank.api.BankRestAPITest.assertResponse(BankRestAPITest.java:74)
+	at bank.api.cases.generated.TC19_VerifyBankAPIWhenAUAccountNumberLengthLessThanSix.test_TC19_VerifyBankAPIWhenAUAccountNumberLengthLessThanSix(TC19_VerifyBankAPIWhenAUAccountNumberLengthLessThanSix.java:22)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1045997582", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1045997582'><pre>java.lang.AssertionError: expected [Length of account_number should be between 6 and 9 when bank_country_code is &apos;AU&apos;] but found [Length of account_number should be between 7 and 11 when bank_country_code is &apos;US&apos;]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:189)
+	at org.testng.Assert.assertEquals(Assert.java:199)
+	at bank.api.BankRestAPITest.assertResponse(BankRestAPITest.java:74)
+	at bank.api.cases.generated.TC19_VerifyBankAPIWhenAUAccountNumberLengthLessThanSix.test_TC19_VerifyBankAPIWhenAUAccountNumberLengthLessThanSix(TC19_VerifyBankAPIWhenAUAccountNumberLengthLessThanSix.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.TestNG.privateMain(TestNG.java:1442)
+	at org.testng.TestNG.main(TestNG.java:1411)
+</pre></div></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC19_VerifyBankAPIWhenAUAccountNumberLengthLessThanSix@6537cf78</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC20_VerifyBankAPIWhenAUAccountNumberLengthMoreThanNine.test_TC20_VerifyBankAPIWhenAUAccountNumberLengthMoreThanNine()'><b>test_TC20_VerifyBankAPIWhenAUAccountNumberLengthMoreThanNine</b><br>Test class: bank.api.cases.generated.TC20_VerifyBankAPIWhenAUAccountNumberLengthMoreThanNine</td>
+<td><div><pre>java.lang.AssertionError: expected [Length of account_number should be between 6 and 9 when bank_country_code is &apos;AU&apos;] but found [Length of account_number should be between 7 and 11 when bank_country_code is &apos;US&apos;]
+	at bank.api.BankRestAPITest.assertResponse(BankRestAPITest.java:74)
+	at bank.api.cases.generated.TC20_VerifyBankAPIWhenAUAccountNumberLengthMoreThanNine.test_TC20_VerifyBankAPIWhenAUAccountNumberLengthMoreThanNine(TC20_VerifyBankAPIWhenAUAccountNumberLengthMoreThanNine.java:22)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace6519275", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace6519275'><pre>java.lang.AssertionError: expected [Length of account_number should be between 6 and 9 when bank_country_code is &apos;AU&apos;] but found [Length of account_number should be between 7 and 11 when bank_country_code is &apos;US&apos;]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:189)
+	at org.testng.Assert.assertEquals(Assert.java:199)
+	at bank.api.BankRestAPITest.assertResponse(BankRestAPITest.java:74)
+	at bank.api.cases.generated.TC20_VerifyBankAPIWhenAUAccountNumberLengthMoreThanNine.test_TC20_VerifyBankAPIWhenAUAccountNumberLengthMoreThanNine(TC20_VerifyBankAPIWhenAUAccountNumberLengthMoreThanNine.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.TestNG.privateMain(TestNG.java:1442)
+	at org.testng.TestNG.main(TestNG.java:1411)
+</pre></div></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC20_VerifyBankAPIWhenAUAccountNumberLengthMoreThanNine@67b6d4ae</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC24_VerifyBankAPIWhenCNAccountNumberLengthLessThanEight.test_TC24_VerifyBankAPIWhenCNAccountNumberLengthLessThanEight()'><b>test_TC24_VerifyBankAPIWhenCNAccountNumberLengthLessThanEight</b><br>Test class: bank.api.cases.generated.TC24_VerifyBankAPIWhenCNAccountNumberLengthLessThanEight</td>
+<td><div><pre>java.lang.AssertionError: expected [400] but found [200]
+	at bank.api.BankRestAPITest.assertResponse(BankRestAPITest.java:73)
+	at bank.api.cases.generated.TC24_VerifyBankAPIWhenCNAccountNumberLengthLessThanEight.test_TC24_VerifyBankAPIWhenCNAccountNumberLengthLessThanEight(TC24_VerifyBankAPIWhenCNAccountNumberLengthLessThanEight.java:22)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace966739377", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace966739377'><pre>java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:388)
+	at org.testng.Assert.assertEquals(Assert.java:398)
+	at bank.api.BankRestAPITest.assertResponse(BankRestAPITest.java:73)
+	at bank.api.cases.generated.TC24_VerifyBankAPIWhenCNAccountNumberLengthLessThanEight.test_TC24_VerifyBankAPIWhenCNAccountNumberLengthLessThanEight(TC24_VerifyBankAPIWhenCNAccountNumberLengthLessThanEight.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.TestNG.privateMain(TestNG.java:1442)
+	at org.testng.TestNG.main(TestNG.java:1411)
+</pre></div></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC24_VerifyBankAPIWhenCNAccountNumberLengthLessThanEight@3cbbc1e0</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC25_VerifyBankAPIWhenCNAccountNumberLengthMoreThanTwenty.test_TC25_VerifyBankAPIWhenCNAccountNumberLengthMoreThanTwenty()'><b>test_TC25_VerifyBankAPIWhenCNAccountNumberLengthMoreThanTwenty</b><br>Test class: bank.api.cases.generated.TC25_VerifyBankAPIWhenCNAccountNumberLengthMoreThanTwenty</td>
+<td><div><pre>java.lang.AssertionError: expected [Length of account_number should be between 8 and 20 when bank_country_code is &apos;CN&apos;] but found [Length of account_number should be between 7 and 11 when bank_country_code is &apos;US&apos;]
+	at bank.api.BankRestAPITest.assertResponse(BankRestAPITest.java:74)
+	at bank.api.cases.generated.TC25_VerifyBankAPIWhenCNAccountNumberLengthMoreThanTwenty.test_TC25_VerifyBankAPIWhenCNAccountNumberLengthMoreThanTwenty(TC25_VerifyBankAPIWhenCNAccountNumberLengthMoreThanTwenty.java:22)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace294247762", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace294247762'><pre>java.lang.AssertionError: expected [Length of account_number should be between 8 and 20 when bank_country_code is &apos;CN&apos;] but found [Length of account_number should be between 7 and 11 when bank_country_code is &apos;US&apos;]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:189)
+	at org.testng.Assert.assertEquals(Assert.java:199)
+	at bank.api.BankRestAPITest.assertResponse(BankRestAPITest.java:74)
+	at bank.api.cases.generated.TC25_VerifyBankAPIWhenCNAccountNumberLengthMoreThanTwenty.test_TC25_VerifyBankAPIWhenCNAccountNumberLengthMoreThanTwenty(TC25_VerifyBankAPIWhenCNAccountNumberLengthMoreThanTwenty.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.TestNG.privateMain(TestNG.java:1442)
+	at org.testng.TestNG.main(TestNG.java:1411)
+</pre></div></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC25_VerifyBankAPIWhenCNAccountNumberLengthMoreThanTwenty@35fb3008</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC27_VerifyBankAPIWhenCNAccountNumberLengthIsTwenty.test_TC27_VerifyBankAPIWhenCNAccountNumberLengthIsTwenty()'><b>test_TC27_VerifyBankAPIWhenCNAccountNumberLengthIsTwenty</b><br>Test class: bank.api.cases.generated.TC27_VerifyBankAPIWhenCNAccountNumberLengthIsTwenty</td>
+<td><div><pre>java.lang.AssertionError: expected [200] but found [400]
+	at bank.api.BankRestAPITest.assertResponse(BankRestAPITest.java:73)
+	at bank.api.cases.generated.TC27_VerifyBankAPIWhenCNAccountNumberLengthIsTwenty.test_TC27_VerifyBankAPIWhenCNAccountNumberLengthIsTwenty(TC27_VerifyBankAPIWhenCNAccountNumberLengthIsTwenty.java:22)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace361571968", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace361571968'><pre>java.lang.AssertionError: expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:388)
+	at org.testng.Assert.assertEquals(Assert.java:398)
+	at bank.api.BankRestAPITest.assertResponse(BankRestAPITest.java:73)
+	at bank.api.cases.generated.TC27_VerifyBankAPIWhenCNAccountNumberLengthIsTwenty.test_TC27_VerifyBankAPIWhenCNAccountNumberLengthIsTwenty(TC27_VerifyBankAPIWhenCNAccountNumberLengthIsTwenty.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.TestNG.privateMain(TestNG.java:1442)
+	at org.testng.TestNG.main(TestNG.java:1411)
+</pre></div></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC27_VerifyBankAPIWhenCNAccountNumberLengthIsTwenty@54a097cc</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC33_VerifyBankAPIWhenNoABAInUS.test_TC33_VerifyBankAPIWhenNoABAInUS()'><b>test_TC33_VerifyBankAPIWhenNoABAInUS</b><br>Test class: bank.api.cases.generated.TC33_VerifyBankAPIWhenNoABAInUS</td>
+<td><div><pre>java.lang.AssertionError: expected [400] but found [200]
+	at bank.api.BankRestAPITest.assertResponse(BankRestAPITest.java:73)
+	at bank.api.cases.generated.TC33_VerifyBankAPIWhenNoABAInUS.test_TC33_VerifyBankAPIWhenNoABAInUS(TC33_VerifyBankAPIWhenNoABAInUS.java:22)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace953742666", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace953742666'><pre>java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:388)
+	at org.testng.Assert.assertEquals(Assert.java:398)
+	at bank.api.BankRestAPITest.assertResponse(BankRestAPITest.java:73)
+	at bank.api.cases.generated.TC33_VerifyBankAPIWhenNoABAInUS.test_TC33_VerifyBankAPIWhenNoABAInUS(TC33_VerifyBankAPIWhenNoABAInUS.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.TestNG.privateMain(TestNG.java:1442)
+	at org.testng.TestNG.main(TestNG.java:1411)
+</pre></div></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC33_VerifyBankAPIWhenNoABAInUS@735b478</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='bank.api.cases.generated.TC00_VerifyBankAPIWhenNoPaymentMethod.test_TC00_VerifyBankAPIWhenNoPaymentMethod()'><b>test_TC00_VerifyBankAPIWhenNoPaymentMethod</b><br>Test class: bank.api.cases.generated.TC00_VerifyBankAPIWhenNoPaymentMethod</td>
+<td></td>
+<td>1</td>
+<td>bank.api.cases.generated.TC00_VerifyBankAPIWhenNoPaymentMethod@3f2a3a5</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC01_VerifyBankAPIWhenPaymentMethodIsLocal.test_TC01_VerifyBankAPIWhenPaymentMethodIsLocal()'><b>test_TC01_VerifyBankAPIWhenPaymentMethodIsLocal</b><br>Test class: bank.api.cases.generated.TC01_VerifyBankAPIWhenPaymentMethodIsLocal</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC01_VerifyBankAPIWhenPaymentMethodIsLocal@614c5515</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC02_VerifyBankAPIWhenPaymentMethodIsSwift.test_TC02_VerifyBankAPIWhenPaymentMethodIsSwift()'><b>test_TC02_VerifyBankAPIWhenPaymentMethodIsSwift</b><br>Test class: bank.api.cases.generated.TC02_VerifyBankAPIWhenPaymentMethodIsSwift</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC02_VerifyBankAPIWhenPaymentMethodIsSwift@77b52d12</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC03_VerifyBankAPIWhenPaymentMethodIsEitherLocalOrSwift.test_TC03_VerifyBankAPIWhenPaymentMethodIsEitherLocalOrSwift()'><b>test_TC03_VerifyBankAPIWhenPaymentMethodIsEitherLocalOrSwift</b><br>Test class: bank.api.cases.generated.TC03_VerifyBankAPIWhenPaymentMethodIsEitherLocalOrSwift</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC03_VerifyBankAPIWhenPaymentMethodIsEitherLocalOrSwift@2d554825</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC04_VerifyBankAPIWhenBankCountryCodeIsUS.test_TC04_VerifyBankAPIWhenBankCountryCodeIsUS()'><b>test_TC04_VerifyBankAPIWhenBankCountryCodeIsUS</b><br>Test class: bank.api.cases.generated.TC04_VerifyBankAPIWhenBankCountryCodeIsUS</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC04_VerifyBankAPIWhenBankCountryCodeIsUS@68837a77</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC05_VerifyBankAPIWhenBankCountryCodeIsAU.test_TC05_VerifyBankAPIWhenBankCountryCodeIsAU()'><b>test_TC05_VerifyBankAPIWhenBankCountryCodeIsAU</b><br>Test class: bank.api.cases.generated.TC05_VerifyBankAPIWhenBankCountryCodeIsAU</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC05_VerifyBankAPIWhenBankCountryCodeIsAU@6be46e8f</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC06_VerifyBankAPIWhenBankCountryCodeIsCN.test_TC06_VerifyBankAPIWhenBankCountryCodeIsCN()'><b>test_TC06_VerifyBankAPIWhenBankCountryCodeIsCN</b><br>Test class: bank.api.cases.generated.TC06_VerifyBankAPIWhenBankCountryCodeIsCN</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC06_VerifyBankAPIWhenBankCountryCodeIsCN@3567135c</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC07_VerifyBankAPIWhenBankCountryCodeIsNotAUCNUS.test_TC07_VerifyBankAPIWhenBankCountryCodeIsNotAUCNUS()'><b>test_TC07_VerifyBankAPIWhenBankCountryCodeIsNotAUCNUS</b><br>Test class: bank.api.cases.generated.TC07_VerifyBankAPIWhenBankCountryCodeIsNotAUCNUS</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC07_VerifyBankAPIWhenBankCountryCodeIsNotAUCNUS@327471b5</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC08_VerifyBankAPIWhenNoBankCountryCode.test_TC08_VerifyBankAPIWhenNoBankCountryCode()'><b>test_TC08_VerifyBankAPIWhenNoBankCountryCode</b><br>Test class: bank.api.cases.generated.TC08_VerifyBankAPIWhenNoBankCountryCode</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC08_VerifyBankAPIWhenNoBankCountryCode@4157f54e</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC09_VerifyBankAPIWhenNoAccountName.test_TC09_VerifyBankAPIWhenNoAccountName()'><b>test_TC09_VerifyBankAPIWhenNoAccountName</b><br>Test class: bank.api.cases.generated.TC09_VerifyBankAPIWhenNoAccountName</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC09_VerifyBankAPIWhenNoAccountName@90f6bfd</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC10_VerifyBankAPIWhenAccountNameLengthIsTwo.test_TC10_VerifyBankAPIWhenAccountNameLengthIsTwo()'><b>test_TC10_VerifyBankAPIWhenAccountNameLengthIsTwo</b><br>Test class: bank.api.cases.generated.TC10_VerifyBankAPIWhenAccountNameLengthIsTwo</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC10_VerifyBankAPIWhenAccountNameLengthIsTwo@47f6473</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC11_VerifyBankAPIWhenAccountNameLengthIsTen.test_TC11_VerifyBankAPIWhenAccountNameLengthIsTen()'><b>test_TC11_VerifyBankAPIWhenAccountNameLengthIsTen</b><br>Test class: bank.api.cases.generated.TC11_VerifyBankAPIWhenAccountNameLengthIsTen</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC11_VerifyBankAPIWhenAccountNameLengthIsTen@15975490</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC12_VerifyBankAPIWhenAccountNameLengthLessTwo.test_TC12_VerifyBankAPIWhenAccountNameLengthLessTwo()'><b>test_TC12_VerifyBankAPIWhenAccountNameLengthLessTwo</b><br>Test class: bank.api.cases.generated.TC12_VerifyBankAPIWhenAccountNameLengthLessTwo</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC12_VerifyBankAPIWhenAccountNameLengthLessTwo@6b143ee9</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC13_VerifyBankAPIWhenAccountNameLengthMoreThanTen.test_TC13_VerifyBankAPIWhenAccountNameLengthMoreThanTen()'><b>test_TC13_VerifyBankAPIWhenAccountNameLengthMoreThanTen</b><br>Test class: bank.api.cases.generated.TC13_VerifyBankAPIWhenAccountNameLengthMoreThanTen</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC13_VerifyBankAPIWhenAccountNameLengthMoreThanTen@1936f0f5</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC14_VerifyBankAPIWhenNoAccountNumber.test_TC14_VerifyBankAPIWhenNoAccountNumber()'><b>test_TC14_VerifyBankAPIWhenNoAccountNumber</b><br>Test class: bank.api.cases.generated.TC14_VerifyBankAPIWhenNoAccountNumber</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC14_VerifyBankAPIWhenNoAccountNumber@6615435c</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC15_VerifyBankAPIWhenAccountNumberInUS.test_TC15_VerifyBankAPIWhenAccountNumberInUS()'><b>test_TC15_VerifyBankAPIWhenAccountNumberInUS</b><br>Test class: bank.api.cases.generated.TC15_VerifyBankAPIWhenAccountNumberInUS</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC15_VerifyBankAPIWhenAccountNumberInUS@4909b8da</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC18_VerifyBankAPIWhenAccountNumberInAU.test_TC18_VerifyBankAPIWhenAccountNumberInAU()'><b>test_TC18_VerifyBankAPIWhenAccountNumberInAU</b><br>Test class: bank.api.cases.generated.TC18_VerifyBankAPIWhenAccountNumberInAU</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC18_VerifyBankAPIWhenAccountNumberInAU@617c74e5</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC21_VerifyBankAPIWhenAUAccountNumberLengthIsNine.test_TC21_VerifyBankAPIWhenAUAccountNumberLengthIsNine()'><b>test_TC21_VerifyBankAPIWhenAUAccountNumberLengthIsNine</b><br>Test class: bank.api.cases.generated.TC21_VerifyBankAPIWhenAUAccountNumberLengthIsNine</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC21_VerifyBankAPIWhenAUAccountNumberLengthIsNine@34b7bfc0</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC22_VerifyBankAPIWhenAUAccountNumberLengthIsSix.test_TC22_VerifyBankAPIWhenAUAccountNumberLengthIsSix()'><b>test_TC22_VerifyBankAPIWhenAUAccountNumberLengthIsSix</b><br>Test class: bank.api.cases.generated.TC22_VerifyBankAPIWhenAUAccountNumberLengthIsSix</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC22_VerifyBankAPIWhenAUAccountNumberLengthIsSix@366e2eef</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC23_VerifyBankAPIWhenAccountNumberInCN.test_TC23_VerifyBankAPIWhenAccountNumberInCN()'><b>test_TC23_VerifyBankAPIWhenAccountNumberInCN</b><br>Test class: bank.api.cases.generated.TC23_VerifyBankAPIWhenAccountNumberInCN</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC23_VerifyBankAPIWhenAccountNumberInCN@6df97b55</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC26_VerifyBankAPIWhenCNAccountNumberLengthIsEight.test_TC26_VerifyBankAPIWhenCNAccountNumberLengthIsEight()'><b>test_TC26_VerifyBankAPIWhenCNAccountNumberLengthIsEight</b><br>Test class: bank.api.cases.generated.TC26_VerifyBankAPIWhenCNAccountNumberLengthIsEight</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC26_VerifyBankAPIWhenCNAccountNumberLengthIsEight@7225790e</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC28_VerifyBankAPIWhenPaymentMethodIsSwiftAndNoSwiftCode.test_TC28_VerifyBankAPIWhenPaymentMethodIsSwiftAndNoSwiftCode()'><b>test_TC28_VerifyBankAPIWhenPaymentMethodIsSwiftAndNoSwiftCode</b><br>Test class: bank.api.cases.generated.TC28_VerifyBankAPIWhenPaymentMethodIsSwiftAndNoSwiftCode</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC28_VerifyBankAPIWhenPaymentMethodIsSwiftAndNoSwiftCode@36f6e879</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC29_VerifyBankAPIWhenSwiftCodeLengthLessThanEight.test_TC29_VerifyBankAPIWhenSwiftCodeLengthLessThanEight()'><b>test_TC29_VerifyBankAPIWhenSwiftCodeLengthLessThanEight</b><br>Test class: bank.api.cases.generated.TC29_VerifyBankAPIWhenSwiftCodeLengthLessThanEight</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC29_VerifyBankAPIWhenSwiftCodeLengthLessThanEight@5a61f5df</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC30_VerifyBankAPIWhenSwiftCodeLengthMoreThanEleven.test_TC30_VerifyBankAPIWhenSwiftCodeLengthMoreThanEleven()'><b>test_TC30_VerifyBankAPIWhenSwiftCodeLengthMoreThanEleven</b><br>Test class: bank.api.cases.generated.TC30_VerifyBankAPIWhenSwiftCodeLengthMoreThanEleven</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC30_VerifyBankAPIWhenSwiftCodeLengthMoreThanEleven@3551a94</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC31_VerifyBankAPIWhenNoBSBInAU.test_TC31_VerifyBankAPIWhenNoBSBInAU()'><b>test_TC31_VerifyBankAPIWhenNoBSBInAU</b><br>Test class: bank.api.cases.generated.TC31_VerifyBankAPIWhenNoBSBInAU</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC31_VerifyBankAPIWhenNoBSBInAU@531be3c5</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC32_VerifyBankAPIWhenBSBLengthNotSix.test_TC32_VerifyBankAPIWhenBSBLengthNotSix()'><b>test_TC32_VerifyBankAPIWhenBSBLengthNotSix</b><br>Test class: bank.api.cases.generated.TC32_VerifyBankAPIWhenBSBLengthNotSix</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC32_VerifyBankAPIWhenBSBLengthNotSix@52af6cff</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC34_VerifyBankAPIWhenABALengthIsNotNine.test_TC34_VerifyBankAPIWhenABALengthIsNotNine()'><b>test_TC34_VerifyBankAPIWhenABALengthIsNotNine</b><br>Test class: bank.api.cases.generated.TC34_VerifyBankAPIWhenABALengthIsNotNine</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC34_VerifyBankAPIWhenABALengthIsNotNine@2c9f9fb0</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC35_VerifyBankAPIWhenHasABAInUS.test_TC35_VerifyBankAPIWhenHasABAInUS()'><b>test_TC35_VerifyBankAPIWhenHasABAInUS</b><br>Test class: bank.api.cases.generated.TC35_VerifyBankAPIWhenHasABAInUS</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC35_VerifyBankAPIWhenHasABAInUS@2096442d</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC36_VerifyBankAPIWhenNoABAInCN.test_TC36_VerifyBankAPIWhenNoABAInCN()'><b>test_TC36_VerifyBankAPIWhenNoABAInCN</b><br>Test class: bank.api.cases.generated.TC36_VerifyBankAPIWhenNoABAInCN</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC36_VerifyBankAPIWhenNoABAInCN@9f70c54</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC37_VerifyBankAPIWhenSwiftCodeWithIncorrectSpecificChar.test_TC37_VerifyBankAPIWhenSwiftCodeWithIncorrectSpecificChar()'><b>test_TC37_VerifyBankAPIWhenSwiftCodeWithIncorrectSpecificChar</b><br>Test class: bank.api.cases.generated.TC37_VerifyBankAPIWhenSwiftCodeWithIncorrectSpecificChar</td>
+<td></td>
+<td>0</td>
+<td>bank.api.cases.generated.TC37_VerifyBankAPIWhenSwiftCodeWithIncorrectSpecificChar@234bef66</td></tr>
+<tr>
+<td title='bank.api.cases.generated.TC38_VerifyBankAPIWhenSwiftCodeSpecificChar.test_TC38_VerifyBankAPIWhenSwiftCodeSpecificChar()'><b>test_TC38_VerifyBankAPIWhenSwiftCodeSpecificChar</b><br>Test class: bank.api.cases.generated.TC38_VerifyBankAPIWhenSwiftCodeSpecificChar</td>
+<td></td>
+<td>1</td>
+<td>bank.api.cases.generated.TC38_VerifyBankAPIWhenSwiftCodeSpecificChar@737996a0</td></tr>
+</table><p>
+</body>
+</html>

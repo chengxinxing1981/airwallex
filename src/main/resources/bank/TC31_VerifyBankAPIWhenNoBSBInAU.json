@@ -1,0 +1,15 @@
+{
+    "payload": {
+        "payment_method": "LOCAL",
+        "bank_country_code": "AU",
+        "account_name": "John Smith",
+        "account_number": "123456789",
+        "aba": "123456789"
+       },
+    "expected": {
+        "status_code" : 400,
+        "error" : "'bsb' is required when bank country code is 'AU'"
+    },
+    "description": "------Testcase31, BankAPI, no bsb in AU------",
+    "group": "BSB"
+}

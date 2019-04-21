@@ -1,0 +1,15 @@
+{
+    "payload": {
+        "payment_method":"LOCAL",
+        "bank_country_code":"US",
+        "account_name":"12345678",
+        "account_number":"f#1.u*&",
+        "aba":"11122233A"
+    },
+    "expected":{
+        "status_code" : 200,
+        "success" : "Bank details saved"
+    },
+    "description": "------Testcase15, BankAPI, Account Number in US------",
+    "group": "AccountNumber"
+}

@@ -1,0 +1,15 @@
+{
+    "payload": {
+        "payment_method":"SWIFT",
+        "bank_country_code":"US",
+        "account_name":"John Smith",
+        "account_number":"123",
+        "aba":"11122233A"
+    },
+    "expected": {
+        "status_code" : 400,
+        "error" : "'swift_code' is required when payment method is 'SWIFT'"
+    },
+    "description": "------Testcase28, BankAPI, Payment mtehod is swift and no swift code------",
+    "group": "SwiftCode"
+}

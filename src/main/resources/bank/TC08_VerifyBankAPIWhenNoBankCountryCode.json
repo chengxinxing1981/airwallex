@@ -1,0 +1,14 @@
+{
+    "payload": {
+        "payment_method":"LOCAL",
+        "account_name":"John Smith",
+        "account_number":"12345678",
+        "aba":"11122233A"
+    },
+    "expected": {
+        "status_code" : 400,
+        "error" : "'bank_country_code' is required, and should be one of 'US', 'AU', or 'CN'"
+    },
+    "description": "------Testcase08, BankAPI, No Bank Country Code------",
+    "group": "BankCountryCode"
+}

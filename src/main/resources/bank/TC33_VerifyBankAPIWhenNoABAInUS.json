@@ -1,0 +1,15 @@
+{
+    "payload": {
+        "payment_method": "LOCAL",
+        "bank_country_code": "US",
+        "account_name": "John Smith",
+        "account_number": "123456789",
+        "bsb":"123456"
+       } ,
+    "expected": {
+        "status_code" : 400,
+        "error" : "'bsb' is required"
+    },
+    "description": "------Testcase33, BankAPI, No ABA when location is US------",
+    "group": "ABA"
+}
